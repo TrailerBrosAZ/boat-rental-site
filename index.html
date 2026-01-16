@@ -17,11 +17,58 @@
     }
 
     header {
-      background-color: #ffffff;
-      padding: 60px 20px 50px;
+      position: relative;
+      height: 360px; 
+      padding: 0;
       border-bottom: 1px solid #e5e7eb;
+
+      background-image:
+        linear-gradient(
+          rgba(0,0,0,0.35),
+          rgba(0,0,0,0.35)
+        ),
+        url("boat-hero.png");
+
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      
+      @media (max-width: 600px) {
+        header {
+          height: 280px;
+        }
+
+        header h2 {
+          font-size: 18px;
+        }
+      }
+
+
+    .header-content {
+      z-index: 1;
+      max-width: 900px;
+      padding: 20px;
     }
 
+    .logo-header img {
+      max-width: 300px;
+      width: 90%;
+      margin-bottom: 12px;
+    }
+
+    header h2 {
+      color: #ffffff;
+      font-size: 22px;
+      font-weight: normal;
+      margin-top: 10px;
+      line-height: 1.4;
+    }
+    
     .logo-header img {
       max-width: 360px;
       width: 90%;
@@ -140,9 +187,10 @@
 
   <!-- HEADER -->
   <header>
-    <div class="logo-header">
-      <a href="https://trailerbrosaz.com">
-        <img src="boat-bros.png.png" alt="Boat Bros Logo" />
+    <div class="header-content">
+      <div class="logo-header">
+        <a href="https://trailerbrosaz.com">
+          <img src="boat-bros.png.png" alt="Boat Bros Logo" />
       </a>
     </div>
 
@@ -150,9 +198,9 @@
       Boat Rentals by Boat Bros AZ<br />
       Book Online or Contact Us to Get Started
     </h2>
-
+    </div>   
   </header>
-
+  
   <!-- BOAT SECTION -->
   <section>
     <div class="equipment-title">17ft Fishing Boat</div>
@@ -226,6 +274,7 @@
 
 </body>
 </html>
+
 
 
 
