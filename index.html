@@ -7,180 +7,176 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f6f6f6;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+ <style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f6f6f6;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
 
+  header {
+    position: relative;
+    height: 360px;
+    border-bottom: 1px solid #e5e7eb;
+
+    background-image:
+      linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.35)
+      ),
+      url("boat-hero.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-content {
+    max-width: 900px;
+    padding: 20px;
+    z-index: 1;
+    text-align: center;
+  }
+
+  .logo-header img {
+    max-width: 300px;
+    width: 90%;
+    margin-bottom: 12px;
+    cursor: pointer;
+  }
+
+  header h2 {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 0;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: 20px;
+    color: #444;
+  }
+
+  .btn {
+    display: inline-block;
+    margin-top: 35px;
+    padding: 16px 36px;
+    font-size: 18px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+  }
+
+  section {
+    max-width: 860px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+  }
+
+  .equipment-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .equipment-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 8px 24px;
+    line-height: 1.6;
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 30px;
+  }
+
+  .carousel {
+    position: relative;
+    max-width: 700px;
+    margin: 30px auto;
+    background-color: #f9fafb;
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .carousel img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0,0,0,0.6);
+    color: #fff;
+    border: none;
+    padding: 10px 16px;
+    cursor: pointer;
+    font-size: 22px;
+    border-radius: 4px;
+  }
+
+  .carousel-btn.left { left: 10px; }
+  .carousel-btn.right { right: 10px; }
+
+  .contact-section {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #f9fafb;
+    padding: 40px 30px;
+    border-radius: 10px;
+  }
+
+  .contact-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #444;
+  }
+
+  .contact-section p {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.8;
+  }
+
+  .contact-section a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  @media (max-width: 600px) {
     header {
-      position: relative;
-      height: 360px; 
-      padding: 0;
-      border-bottom: 1px solid #e5e7eb;
-
-      background-image:
-        linear-gradient(
-          rgba(0,0,0,0.35),
-          rgba(0,0,0,0.35)
-        ),
-        url("boat-hero.png");
-
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      
-      @media (max-width: 600px) {
-        header {
-          height: 280px;
-        }
-
-        header h2 {
-          font-size: 18px;
-        }
-      }
-
-
-    .header-content {
-      z-index: 1;
-      max-width: 900px;
-      padding: 20px;
-    }
-
-    .logo-header img {
-      max-width: 300px;
-      width: 90%;
-      margin-bottom: 12px;
+      height: 280px;
     }
 
     header h2 {
-      color: #ffffff;
-      font-size: 22px;
-      font-weight: normal;
-      margin-top: 10px;
-      line-height: 1.4;
-    }
-    
-    .logo-header img {
-      max-width: 360px;
-      width: 90%;
-      cursor: pointer;
-    }
-
-    h2 {
-      font-size: 24px;
-      font-weight: normal;
-      margin-top: 20px;
-      color: #444;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 35px;
-      padding: 16px 36px;
       font-size: 18px;
-      background-color: #000;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
 
-    .btn:hover{
-      transform: translate(-1px);
-      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    .logo-header img {
+      max-width: 240px;
     }
-    
-    section {
-      max-width: 860px;
-      margin: 50px auto;
-      background-color: #ffffff;
-      padding: 40px 30px;
-      border-radius: 10px;
-    }
-
-    .equipment-title {
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-    
-    .equipment-details {
-     display: grid;
-     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-     gap: 8px 24px;
-     line-height: 1.6;
-     font-size: 16px;
-     color: #444;
-     margin-bottom: 30px;
-   }
-
-
-    /* CAROUSEL */
-    .carousel {
-      position: relative;
-      max-width: 700px;
-      margin: 30px auto;
-      background-color: #f9fafb;
-      padding: 12px;
-      border-radius: 12px;
-    }
-
-    .carousel img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .carousel-btn {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0,0,0,0.6);
-      color: #fff;
-      border: none;
-      padding: 10px 16px;
-      cursor: pointer;
-      font-size: 22px;
-      border-radius: 4px;
-    }
-
-    .carousel-btn.left { left: 10px; }
-    .carousel-btn.right { right: 10px; }
-
-    .contact-section {
-       max-width: 900px;
-       margin: 50px auto;
-       background-color: #f9fafb;
-       padding: 40px 30px;
-       border-radius: 10px;
-    }
-
-     .contact-section h2 {
-        font-size: 24px;
-        margin-bottom: 15px;
-        color: #444;
-     }
-
-    .contact-section p {
-      font-size: 16px;
-      color: #444;
-      line-height: 1.8;
-    }
-
-    .contact-section a {
-      color: #000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-  </style>
+  }
+   
+</style>
 </head>
 
 <body id="top">
@@ -274,6 +270,7 @@
 
 </body>
 </html>
+
 
 
 
